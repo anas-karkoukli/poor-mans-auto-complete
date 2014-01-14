@@ -13,18 +13,16 @@ namespace pmac_demo.Controllers
             return View();
         }
 
-        public ActionResult About()
+        [Route("search/{query}")]
+        [HttpGet]
+        public JsonResult Demo(string query)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            var result = Enumerable.Range(1, 6).Select(_ => new { value = _, name = query + _ }).ToArray();
+            return new JsonResult
+                   {
+                       JsonRequestBehavior = JsonRequestBehavior.AllowGet,
+                       Data = result
+                   };
         }
     }
 }

@@ -1,0 +1,25 @@
+﻿
+.auto-complete {
+    z-index: 10000;
+}
+
+    .auto-complete ul {
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #fff;
+        border-left: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+    }
+
+        .auto-complete ul li {
+            list-style: none;
+            text-align: left;
+            padding: 10px 16px 10px 16px;
+            font-size: 18px;
+            background-color: #fff;
+        }
+
+            .auto-complete ul li:hover, .selected {
+                background-color: #cccccc !important;
+            }
